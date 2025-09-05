@@ -1,111 +1,68 @@
-# Kernel Applied Filter
+# Kernel Applied Filter Project
 
-Este é um projeto simples em Python que utiliza uma interface de linha de comando (CLI) para aplicar diversos filtros de imagem baseados em kernels de convolução. O usuário pode carregar uma imagem, escolher um filtro, definir a intensidade do efeito e salvar o resultado.
+![Versão do Python](https://img.shields.io/badge/python-3.9+-blue.svg)
+![Licença](https://img.shields.io/badge/license-MIT-green.svg)
+![Status do Projeto](https://img.shields.io/badge/status-ativo-brightgreen)
 
-## Funcionalidades
+Uma aplicação de linha de comando (CLI) poderosa e interativa para aplicar filtros de imagem em tempo real usando a técnica de convolução de kernels.
 
-  - **Carregamento de Imagem**: Seleciona um arquivo de imagem do sistema através de uma janela de diálogo.
-  - **Interface Interativa**: Um menu no terminal permite ao usuário escolher os filtros e opções.
-  - **Variedade de Filtros**: Inclui uma coleção de kernels para diferentes efeitos, como suavização, nitidez, detecção de bordas e estilização.
-  - **Controle de Intensidade**: Permite aplicar o mesmo filtro múltiplas vezes para intensificar o efeito.
-  - **Salvamento Automático**: As imagens processadas são salvas automaticamente na pasta `/output` com um nome descritivo.
+---
 
-## Filtros Disponíveis
+### Demonstração Geral
 
-O projeto conta com os seguintes filtros implementados:
+![Demonstração do App](https://i.imgur.com/TuZlqQP.gif)
 
-#### Suavização (Blur)
+## 📚 Sobre o Projeto
 
-  - Blur (Box)
-  - Blur Gaussiano
-  - Motion Blur (Desfoque de Movimento)
+Este projeto permite a manipulação de imagens digitais através de **kernels de convolução**. Um kernel é uma pequena matriz que desliza sobre a imagem, modificando o valor de cada pixel com base em seus vizinhos. Esse processo é a base para dezenas de efeitos, desde um simples desfoque (blur) até a complexa detecção de bordas.
 
-#### Nitidez e Relevo
+A aplicação foi construída com uma arquitetura modular, separando a lógica de negócios, a interface do usuário e o gerenciamento de arquivos, tornando-a fácil de manter e estender com novos filtros.
 
-  - Nitidez (Sharpen)
-  - Nitidez Intensa
-  - Relevo (Emboss)
+## ✨ Funcionalidades Principais
 
-#### Detecção de Bordas
+-   **Interface de Linha de Comando Interativa**: Um menu simples e intuitivo para uma experiência de usuário fluida.
+-   **Ampla Gama de Filtros**: Coleção de filtros pré-definidos para suavização, nitidez, detecção de bordas e efeitos estilísticos.
+-   **Controle de Intensidade**: Aplique qualquer filtro múltiplas vezes para intensificar o efeito desejado.
+-   **Visualização em Tempo Real**: A imagem processada é exibida instantaneamente após a aplicação do filtro.
+-   **Arquitetura Extensível**: Adicionar novos filtros é tão simples quanto definir uma nova matriz de kernel no arquivo `Kernels.py`.
 
-  - Bordas (Laplaciano)
-  - Bordas Verticais (Sobel X)
-  - Bordas Horizontais (Sobel Y)
+## 🎨 Showcase de Filtros
 
-## Estrutura do Projeto
+Veja alguns dos efeitos que você pode aplicar com este programa.
 
-```
-.
-├── output/              # Pasta onde as imagens processadas são salvas
-├── src/
-│   ├── businessLogic/
-│   │   ├── Kernels.py           # Define todos os kernels de convolução
-│   │   ├── mathOperations.py    # Funções de processamento de imagem (convolução, etc.)
-│   │   └── fileManager.py       # Gerencia a seleção de arquivos
-│   └── app.py               # Script principal que executa a aplicação
-└── requirements.txt     # Lista de dependências do projeto
-```
+| Filtro | Demonstração |
+| :--- | :---: |
+| **Motion Blur** | ![Filtro Motion Blur](https://i.imgur.com/jGq2z5A.gif) <br> *(Simula o efeito de movimento na imagem.)* |
+| **Relevo (Emboss)** | ![Filtro de Relevo](https://i.imgur.com/pOz8YxT.gif) <br> *(Cria um efeito de entalhe ou relevo na imagem.)* |
+| **Bordas (Sobel Y)** | ![Filtro Sobel](https://i.imgur.com/KcygPjM.gif) <br> *(Detecta e realça as bordas horizontais.)* |
 
-## Como Executar
+## 🛠️ Tecnologias Utilizadas
 
-**1. Pré-requisitos:**
+-   **Python**: Linguagem principal do projeto.
+-   **OpenCV**: Utilizado para a operação de convolução (`cv2.filter2D`), garantindo máxima performance.
+-   **Pillow (PIL)**: Para abrir, converter e salvar os formatos de imagem.
+-   **NumPy**: Para a criação e manipulação eficiente das matrizes (imagens e kernels).
 
-  - Python 3.x instalado.
+## 🚀 Como Executar
 
-**2. Clone este repositório (opcional):**
+Siga os passos abaixo para configurar e executar o projeto em sua máquina local.
+
+#### **1. Pré-requisitos**
+-   Python 3.8 ou superior.
+
+#### **2. Instalação**
 
 ```bash
-git clone <url-do-seu-repositorio>
-cd KernelAppliedFilterProject
-```
+# Clone o repositório
+git clone [https://github.com/seu-usuario/kernel-applied-filter-project.git](https://github.com/seu-usuario/kernel-applied-filter-project.git)
+cd kernel-applied-filter-project
 
-**3. Crie um ambiente virtual:**
-
-```bash
+# Crie e ative um ambiente virtual
 python -m venv venv
-```
-
-  - No Windows:
-
-<!-- end list -->
-
-```bash
+# Windows:
 .\venv\Scripts\activate
-```
-
-  - No macOS/Linux:
-
-<!-- end list -->
-
-```bash
+# macOS/Linux:
 source venv/bin/activate
-```
 
-**4. Instale as dependências:**
-Certifique-se de que o arquivo `requirements.txt` exista com o seguinte conteúdo:
-
-```
-numpy
-Pillow
-opencv-python
-```
-
-Em seguida, instale as bibliotecas com o comando:
-
-```bash
+# Instale as dependências
 pip install -r requirements.txt
-```
-
-**5. Execute a aplicação:**
-
-```bash
-python src/app.py
-```
-
-Uma janela de seleção de arquivo será aberta. Após selecionar uma imagem, o menu de filtros aparecerá no seu terminal.
-
-## Dependências
-
-  - **Pillow**: Para manipulação de imagens (abrir, salvar).
-  - **NumPy**: Para a criação e manipulação das matrizes (kernels e imagens).
-  - **OpenCV-Python**: Para a operação de convolução (`cv2.filter2D`) e conversão de cores, que é extremamente rápida e eficiente.
