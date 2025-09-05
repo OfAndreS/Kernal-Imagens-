@@ -10,7 +10,8 @@ Uma aplicação de linha de comando (CLI) poderosa e interativa para aplicar fil
 
 ### Demonstração Geral
 
-![Demonstração do App](https://i.imgur.com/TuZlqQP.gif)
+<img width="1387" height="522" alt="image" src="https://github.com/user-attachments/assets/7cc59eb5-8707-43c0-a5d0-75bc497627fc" />
+
 
 ## 📚 Sobre o Projeto
 
@@ -32,9 +33,9 @@ Veja alguns dos efeitos que você pode aplicar com este programa.
 
 | Filtro | Demonstração |
 | :--- | :---: |
-| **Motion Blur** | ![Filtro Motion Blur](https://i.imgur.com/jGq2z5A.gif) <br> *(Simula o efeito de movimento na imagem.)* |
-| **Relevo (Emboss)** | ![Filtro de Relevo](https://i.imgur.com/pOz8YxT.gif) <br> *(Cria um efeito de entalhe ou relevo na imagem.)* |
-| **Bordas (Sobel Y)** | ![Filtro Sobel](https://i.imgur.com/KcygPjM.gif) <br> *(Detecta e realça as bordas horizontais.)* |
+| **Motion Blur** | <img width="1152" height="646" alt="image" src="https://github.com/user-attachments/assets/c2533871-2b74-460f-ada8-dcb504f68c01" />*(Simula o efeito de movimento na imagem.)* |
+| **Relevo (Emboss)** | <img width="1153" height="647" alt="image" src="https://github.com/user-attachments/assets/3f8ff45d-9b01-4249-a874-ff22a71baf20" />*(Cria um efeito de entalhe ou relevo na imagem.)* |
+| **Bordas (Sobel Y)** | <img width="1150" height="647" alt="image" src="https://github.com/user-attachments/assets/3b6a719d-87d5-40f7-94f8-5f12d07292dc" />*(Detecta e realça as bordas horizontais.)* |
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -48,7 +49,7 @@ Veja alguns dos efeitos que você pode aplicar com este programa.
 Siga os passos abaixo para configurar e executar o projeto em sua máquina local.
 
 #### **1. Pré-requisitos**
--   Python 3.8 ou superior.
+-   Python 3.12 ou superior.
 
 #### **2. Instalação**
 
