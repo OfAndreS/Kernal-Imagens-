@@ -6,15 +6,7 @@ from businessLogic import Kernels as k
 
 import numpy as np
 
-# - - - O que o código faz:
-
-# Importar arquivo 
-# Selecionar um Kernel
-# Aplicar convolução
-# Salvar imagem
-
 def processesImage(intensidade, myKernel, myImage, typeOfFilter):
-    # Verifica se a imagem é válida antes de processar
     if myImage is None:
         print("| ❌ ) - Nenhuma imagem carregada para processar.")
         return
@@ -69,7 +61,6 @@ def firstMenu(myImage):
         myKernel = None
         typeOfFilter = ""
         
-        # Lógica para lidar com entradas de 1 ou 2 dígitos (ex: '1' ou '01')
         myInput = userInput.zfill(2)
 
         match myInput:

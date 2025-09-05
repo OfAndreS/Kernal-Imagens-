@@ -18,8 +18,8 @@ def selectFileWithFileManager():
     if arquivo_selecionado:
         print(f"\n| ✅ Arquivo selecionado com sucesso!")
         print(f"| O caminho do arquivo é: {arquivo_selecionado}")
-        return arquivo_selecionado  # <--- ADICIONAR ESTA LINHA
+        return arquivo_selecionado  
 
     else:
         print("\n| ❌ Nenhuma seleção foi feita. O programa foi encerrado.")
-        return None # <--- ADICIONAR ESTA LINHA
+        return None 

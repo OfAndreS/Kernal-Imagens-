@@ -25,7 +25,7 @@ def applieConvolution(matriz_imagem, kernel):
     return matriz_saida
 
 def convertImageToRGB(matriz_blur_bgr):
-    matriz_blur_rgb = cv2.cvtColor(matriz_blur_bgr, cv2.COLOR_BGR2RGB) # Converte de volta de BGR pra RGB para salvar/visualizar com Pillow
+    matriz_blur_rgb = cv2.cvtColor(matriz_blur_bgr, cv2.COLOR_BGR2RGB) 
     imagem_blur_pil = Image.fromarray(matriz_blur_rgb)
     
     return imagem_blur_pil
