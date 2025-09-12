@@ -4,8 +4,6 @@
 ![Licença](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status do Projeto](https://img.shields.io/badge/status-ativo-brightgreen)
 
-Uma aplicação de linha de comando (CLI) poderosa e interativa para aplicar filtros de imagem em tempo real usando a técnica de convolução de kernels.
-
 ---
 
 ### Demonstração Geral
