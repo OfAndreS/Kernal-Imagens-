@@ -27,7 +27,7 @@ A aplicação foi construída com uma arquitetura modular, separando a lógica d
 -   **Visualização em Tempo Real**: A imagem processada é exibida instantaneamente após a aplicação do filtro.
 -   **Arquitetura Extensível**: Adicionar novos filtros é tão simples quanto definir uma nova matriz de kernel no arquivo `Kernels.py`.
 
-## 🎨 Showcase de Filtros
+## Showcase de Filtros
 
 Veja alguns dos efeitos que você pode aplicar com este programa.
 
